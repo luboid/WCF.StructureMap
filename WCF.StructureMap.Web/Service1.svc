@@ -1,0 +1,3 @@
+﻿<%@ServiceHost Service="Wcf.StructureMap.Services.Service1"
+               Factory="Wcf.StructureMap.StructureMapServiceHostFactory"
+               language=c# Debug="true" %>
