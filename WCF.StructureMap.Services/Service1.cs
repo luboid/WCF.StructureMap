@@ -30,6 +30,27 @@ namespace Wcf.StructureMap.Services
             this.locator = locator;
         }
 
+        /**
+         * XML Request
+         * <GetData xmlns='http://tempuri.org/'>
+         * 	<value>10</value>
+         * </GetData>
+         * 
+         * XML Response
+         * <GetDataResponse xmlns="http://tempuri.org/">
+         *     <GetDataResult>You entered: 10</GetDataResult>
+         * </GetDataResponse>
+         * 
+         * JSON Request
+         * {
+         * 	"value":10
+         * }
+         * 
+         * JSON Response
+         * {
+         *     "GetDataResult": "You entered: 10"
+         * }
+         */
         public string GetData(int value)
         {
             var rep2 = locator.GetService<Repository2>();

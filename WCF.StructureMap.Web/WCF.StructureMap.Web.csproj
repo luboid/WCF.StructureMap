@@ -67,7 +67,9 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Service1.svc" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -89,13 +91,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WCF.StructureMap.Services\WCF.StructureMap.Services.csproj">
-      <Project>{62497df9-5a91-4900-982e-c0dbed3d5cfa}</Project>
-      <Name>WCF.StructureMap.Services</Name>
+    <ProjectReference Include="..\Wcf.JsonErrorHandler\Wcf.JsonErrorHandler.csproj">
+      <Project>{c3141d4b-8a67-462b-b506-0f7b5da25c43}</Project>
+      <Name>Wcf.JsonErrorHandler</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WCF.StructureMap\WCF.StructureMap.csproj">
+    <ProjectReference Include="..\WCF.StructureMap.Services\Wcf.StructureMap.Services.csproj">
+      <Project>{62497df9-5a91-4900-982e-c0dbed3d5cfa}</Project>
+      <Name>Wcf.StructureMap.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WCF.StructureMap\Wcf.StructureMap.csproj">
       <Project>{8008f5ba-5dcf-45bb-989d-c60c6f793df1}</Project>
-      <Name>WCF.StructureMap</Name>
+      <Name>Wcf.StructureMap</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -113,7 +119,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>52324</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44300/</IISUrl>
+          <IISUrl>http://localhost:57009/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
